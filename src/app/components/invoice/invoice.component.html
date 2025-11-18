@@ -3,23 +3,7 @@
     <div class="col-lg-10 col-xl-8">
       <div class="card border-0 shadow-sm">
         <!-- Encabezado factura -->
-        <div class="card-body pb-3 border-bottom">
-          <div class="d-flex justify-content-between align-items-start">
-            <div>
-              <h2 class="h4 mb-1">Factura</h2>
-              <p class="text-muted mb-0">Ejemplo de factura</p>
-            </div>
-            <div class="text-end">
-              <div class="small text-muted">ID factura</div>
-              <div class="fw-semibold">#{{ invoice.id }}</div>
-            </div>
-          </div>
-
-          <div class="mt-3">
-            <span class="text-muted small d-block">Nombre</span>
-            <span class="fw-semibold">{{ invoice.name }}</span>
-          </div>
-        </div>
+        <invoice-view [id]="invoice.id" [name]="invoice.name"></invoice-view>
 
         <div class="card-body">
           <!-- Datos cliente / empresa -->
